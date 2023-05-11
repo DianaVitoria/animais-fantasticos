@@ -1,3 +1,10 @@
+:root{
+    --cor-background-body:#faf6ed;
+    --cor-letras-body: #222;
+    --cor-backgroud-menu: #fb5;
+    --px-10cm: 0.625rem;
+}
+
 body, h1, h2, h3, ul, li, p, dd, dt, dl {
     margin: 0px;
     padding: 0px;
@@ -14,8 +21,33 @@ ul{
 }
 
 body{
-    background: #faf6ed;
-    color: #222;
+    background: var(--cor-background-body) ;
+    color: var(--cor-letras-body);
     -webkit-font-smoothing: antialiased;
+    display: grid;
+    grid-template-columns: 1fr 7.5rem minmax(300px, 800px) 1fr;
+
+}
+.menu{
+    grid-column: 3 / 5;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background: var(--cor-backgroud-menu);
+}
+
+.menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    color:  var(--cor-letras-body);
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 550;
     
 }
